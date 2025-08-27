@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<!-- EF Core & Identity paketlerini 8.0.18 sürümüne güncelliyoruz -->
+	<ItemGroup>
+		<!-- ASP.NET Core Identity ile EF Core uyumu için 8.x -->
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.18" />
+
+		<!-- EF Core Ana kütüphaneler -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.18" />
+
+		<!-- Design‑time ve CLI araçları -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.18">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.18">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+
+		<!-- Dosya yükleme vs. için Http paketleri gerekiyorsa, bunları ayrı projede kullanın -->
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\OnlineEduSystem.Domain\OnlineEduSystem.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
